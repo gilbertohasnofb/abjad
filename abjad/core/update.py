@@ -5,7 +5,10 @@ from ..indicators.TimeSignature import TimeSignature
 from ..storage import StorageFormatManager
 from ..timespans import AnnotatedTimespan, TimespanList
 from ..utilities.Sequence import Sequence
+from .AfterGraceContainer import AfterGraceContainer
+from .BeforeGraceContainer import BeforeGraceContainer
 from .Iteration import Iteration
+from .OnBeatGraceContainer import OnBeatGraceContainer
 from .inspectx import Inspection
 
 
@@ -253,8 +256,6 @@ class UpdateManager(object):
         Updating offsets does not update indicators.
         Updating offsets does not update offsets in seconds.
         """
-        from .OnBeatGraceContainer import OnBeatGraceContainer
-
         on_beat_grace_music = []
         for component in self._iterate_entire_score(root):
             if isinstance(component, OnBeatGraceContainer) or isinstance(
@@ -307,10 +308,6 @@ class UpdateManager(object):
 
     @classmethod
     def _update_component_offsets(class_, component):
-        from .AfterGraceContainer import AfterGraceContainer
-        from .BeforeGraceContainer import BeforeGraceContainer
-        from .OnBeatGraceContainer import OnBeatGraceContainer
-
         if isinstance(component, BeforeGraceContainer):
             pair = class_._get_before_grace_leaf_offsets(component[0])
             start_offset = pair[0]

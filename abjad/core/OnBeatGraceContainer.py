@@ -4,11 +4,15 @@ from .. import typings
 from ..bundle import LilyPondFormatBundle
 from ..duration import Duration
 from ..overrides import LilyPondLiteral, tweak
+from ..spanners import beam, slur
 from ..tags import Tag, Tags
+from .Chord import Chord
 from .Component import attach, detach
 from .Container import Container
 from .Mutation import Mutation
+from .Note import Note
 from .Selection import Selection
+from .Voice import Voice
 from .inspectx import Inspection
 
 abjad_tags = Tags()
@@ -130,8 +134,6 @@ class OnBeatGraceContainer(Container):
     # This is hackish, and some sort of longer term solution should
     # happen later.
     def _attach_lilypond_one_voice(self):
-        from .Voice import Voice
-
         anchor_leaf = self._get_on_beat_anchor_leaf()
         anchor_voice = Inspection(anchor_leaf).parentage().get(Voice)
         final_anchor_leaf = Inspection(anchor_voice).leaf(-1)
@@ -209,9 +211,6 @@ class OnBeatGraceContainer(Container):
         return anchor_leaf
 
     def _match_anchor_leaf(self):
-        from .Chord import Chord
-        from .Note import Note
-
         first_grace = Inspection(self).leaf(0)
         if not isinstance(first_grace, (Note, Chord)):
             message = "must start with note or chord:\n"
@@ -778,10 +777,6 @@ def on_beat_grace_container(
         Exception: grace Duration(11, 8) exceeds anchor Duration(1, 4).
 
     """
-    from ..spanners import beam, slur
-    from .Container import Container
-    from .Selection import Selection
-    from .Voice import Voice
 
     def _site(n):
         return Tag(f"abjad.on_beat_grace_container({n})")
