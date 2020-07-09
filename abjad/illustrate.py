@@ -13,12 +13,12 @@ from .core.Skip import Skip
 from .core.Staff import Staff
 from .core.StaffGroup import StaffGroup
 from .core.Voice import Voice
-from .core.inspectx import Inspection
 from .core.makers import LeafMaker, NoteMaker
 from .duration import Duration
 from .indicators.Clef import Clef
 from .indicators.MetricModulation import MetricModulation
 from .indicators.StaffChange import StaffChange
+from .inspectx import Inspection
 from .lilypondfile import Block, LilyPondFile
 from .markups import Markup, MarkupCommand, MarkupList, Postscript
 from .new import new

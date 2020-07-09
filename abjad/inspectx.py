@@ -1,25 +1,25 @@
 import collections
 import typing
 
-from .. import enums, typings
-from ..duration import Duration
-from ..indicators.RepeatTie import RepeatTie
-from ..indicators.StaffChange import StaffChange
-from ..indicators.Tie import Tie
-from ..indicators.TimeSignature import TimeSignature
-from ..instruments import Instrument
-from ..markups import Markup
-from ..pitch.pitches import NamedPitch
-from ..pitch.sets import PitchSet
-from ..storage import StorageFormatManager
-from ..tags import Tag
-from ..timespans import Timespan
-from .Chord import Chord
-from .Component import Component
-from .Container import Container
-from .Leaf import Leaf
-from .Note import Note
-from .Staff import Staff
+from . import enums, typings
+from .core.Chord import Chord
+from .core.Component import Component
+from .core.Container import Container
+from .core.Leaf import Leaf
+from .core.Note import Note
+from .core.Staff import Staff
+from .duration import Duration
+from .indicators.RepeatTie import RepeatTie
+from .indicators.StaffChange import StaffChange
+from .indicators.Tie import Tie
+from .indicators.TimeSignature import TimeSignature
+from .instruments import Instrument
+from .markups import Markup
+from .pitch.pitches import NamedPitch
+from .pitch.sets import PitchSet
+from .storage import StorageFormatManager
+from .tags import Tag
+from .timespans import Timespan
 
 
 class Inspection(object):
@@ -76,7 +76,7 @@ class Inspection(object):
 
     @staticmethod
     def _get_logical_tie(LEAF):
-        from .LogicalTie import LogicalTie
+        from .core.LogicalTie import LogicalTie
 
         leaves_before, leaves_after = [], []
         current_leaf = LEAF
@@ -170,8 +170,8 @@ class Inspection(object):
 
     @staticmethod
     def _leaf(LEAF, n):
-        from .OnBeatGraceContainer import OnBeatGraceContainer
-        from .Selection import Selection
+        from .core.OnBeatGraceContainer import OnBeatGraceContainer
+        from .core.Selection import Selection
 
         assert n in (-1, 0, 1), repr(n)
         if n == 0:
@@ -942,8 +942,8 @@ class Inspection(object):
                 Note("fs'16")
 
         """
-        from .Descendants import Descendants
-        from .Selection import Selection
+        from .core.Descendants import Descendants
+        from .core.Selection import Selection
 
         if isinstance(self.client, Component):
             return Descendants(self.client)
@@ -1924,9 +1924,9 @@ class Inspection(object):
 
 
         """
-        from .AfterGraceContainer import AfterGraceContainer
-        from .BeforeGraceContainer import BeforeGraceContainer
-        from .OnBeatGraceContainer import OnBeatGraceContainer
+        from .core.AfterGraceContainer import AfterGraceContainer
+        from .core.BeforeGraceContainer import BeforeGraceContainer
+        from .core.OnBeatGraceContainer import OnBeatGraceContainer
 
         prototype = (
             AfterGraceContainer,
@@ -2848,7 +2848,7 @@ class Inspection(object):
             ---
 
         """
-        from .Iteration import Iteration
+        from .core.Iteration import Iteration
 
         if n not in (-1, 0, 1):
             message = "n must be -1, 0 or 1:\n"
@@ -3070,7 +3070,7 @@ class Inspection(object):
                 Note("fs'16")
 
         """
-        from .Lineage import Lineage
+        from .core.Lineage import Lineage
 
         if not isinstance(self.client, Component):
             raise Exception("can only get lineage on component.")
@@ -3590,7 +3590,7 @@ class Inspection(object):
                 (Note("ds'4"), <Staff{4}>)
 
         """
-        from .Parentage import Parentage
+        from .core.Parentage import Parentage
 
         if not isinstance(self.client, Component):
             message = "can only get parentage on component"
@@ -3688,7 +3688,7 @@ class Inspection(object):
             Note("fs'16")                  PitchSet(["fs'"])
 
         """
-        from .Selection import Selection
+        from .core.Selection import Selection
 
         if not self.client:
             return None
@@ -3773,7 +3773,7 @@ class Inspection(object):
             slot "absolute after":
 
         """
-        from ..formatting import LilyPondFormatManager
+        from .formatting import LilyPondFormatManager
 
         if isinstance(self.client, Container):
             bundle = LilyPondFormatManager.bundle_format_contributions(self.client)
@@ -3887,7 +3887,7 @@ class Inspection(object):
             True
 
         """
-        from .Selection import Selection
+        from .core.Selection import Selection
 
         lt_head_count = 0
         leaves = Selection(self.client).leaves()

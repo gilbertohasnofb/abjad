@@ -8,6 +8,7 @@ import typing
 from .. import enums, mathtools, typings
 from ..duration import Duration, Offset
 from ..indicators.Tie import Tie
+from ..inspectx import Inspection
 from ..new import new
 from ..pitch.pitches import NamedPitch, NumberedPitch
 from ..pitch.segments import PitchSegment
@@ -31,7 +32,6 @@ from .Rest import Rest
 from .Skip import Skip
 from .Tuplet import Tuplet
 from .Voice import Voice
-from .inspectx import Inspection
 
 ### INEQUALITIES ###
 

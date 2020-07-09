@@ -9,7 +9,7 @@ from ..core.Score import Score
 from ..core.Selection import Selection
 from ..core.Staff import Staff
 from ..core.Voice import Voice
-from ..core.inspectx import Inspection
+from ..inspectx import Inspection
 from ..lilypondfile import LilyPondFile
 from ..overrides import LilyPondLiteral
 from ..storage import StorageFormatManager

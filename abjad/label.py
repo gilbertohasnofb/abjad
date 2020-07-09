@@ -9,10 +9,10 @@ from .core.Iteration import Iteration
 from .core.Note import Note
 from .core.Selection import Selection
 from .core.Skip import Skip
-from .core.inspectx import Inspection
 from .core.verticalmoment import iterate_vertical_moments
 from .duration import Duration, NonreducedFraction
 from .indicators.LilyPondComment import LilyPondComment
+from .inspectx import Inspection
 from .markups import Markup, MarkupCommand
 from .new import new
 from .overrides import LilyPondLiteral, override, tweak

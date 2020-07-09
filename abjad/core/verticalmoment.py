@@ -1,3 +1,4 @@
+from ..inspectx import Inspection
 from ..pitch.segments import PitchSegment
 from ..utilities.Enumerator import Enumerator
 from ..utilities.OrderedDict import OrderedDict
@@ -7,7 +8,6 @@ from .Iteration import Iteration
 from .Leaf import Leaf
 from .Note import Note
 from .Selection import Selection
-from .inspectx import Inspection
 
 
 class VerticalMoment(object):

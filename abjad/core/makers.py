@@ -5,6 +5,7 @@ import typing
 
 from .. import exceptions, mathtools, typings
 from ..duration import Duration, Multiplier, NonreducedFraction
+from ..inspectx import Inspection
 from ..pitch.pitchclasses import PitchClass
 from ..pitch.pitches import NamedPitch, NumberedPitch
 from ..ratio import NonreducedRatio, Ratio
@@ -19,7 +20,6 @@ from .Rest import Rest
 from .Selection import Selection
 from .Skip import Skip
 from .Tuplet import Tuplet
-from .inspectx import Inspection
 
 
 class LeafMaker(object):

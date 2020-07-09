@@ -20,8 +20,8 @@ from .core.Selection import Selection
 from .core.Skip import Skip
 from .core.Staff import Staff
 from .core.Voice import Voice
-from .core.inspectx import Inspection
 from .indicators.TimeSignature import TimeSignature
+from .inspectx import Inspection
 from .overrides import LilyPondLiteral, override, setting
 from .pitch.pitches import NamedPitch
 from .scheme import Scheme, SpacingVector

@@ -1,6 +1,6 @@
 from . import enums
 from .bundle import LilyPondFormatBundle
-from .core.inspectx import Inspection
+from .inspectx import Inspection
 from .new import new
 from .overrides import override, setting
 from .storage import StorageFormatManager

@@ -673,12 +673,12 @@ class Component(object):
                 component._offsets_in_seconds_are_current = False
 
     def _update_measure_numbers(self):
-        from .update import UpdateManager
+        from ..update import UpdateManager
 
         UpdateManager()._update_measure_numbers(self)
 
     def _update_now(self, offsets=False, offsets_in_seconds=False, indicators=False):
-        from .update import UpdateManager
+        from ..update import UpdateManager
 
         return UpdateManager()._update_now(
             self,

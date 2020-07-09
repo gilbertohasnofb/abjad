@@ -370,10 +370,9 @@ from .core.verticalmoment import (
     iterate_vertical_moments,
 )
 from .core.Voice import Voice
-from .core.inspectx import Inspection
-from .core.inspectx import inspect
-from .core.update import UpdateManager
-from .core.wellformedness import Wellformedness, wellformed
+from .inspectx import Inspection, inspect
+from .update import UpdateManager
+from .wellformedness import Wellformedness, wellformed
 
 from .label import ColorMap, Label, label
 

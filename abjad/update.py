@@ -1,15 +1,15 @@
-from .. import mathtools
-from ..duration import Duration, Multiplier, Offset
-from ..indicators.MetronomeMark import MetronomeMark
-from ..indicators.TimeSignature import TimeSignature
-from ..storage import StorageFormatManager
-from ..timespans import AnnotatedTimespan, TimespanList
-from ..utilities.Sequence import Sequence
-from .AfterGraceContainer import AfterGraceContainer
-from .BeforeGraceContainer import BeforeGraceContainer
-from .Iteration import Iteration
-from .OnBeatGraceContainer import OnBeatGraceContainer
+from . import mathtools
+from .core.AfterGraceContainer import AfterGraceContainer
+from .core.BeforeGraceContainer import BeforeGraceContainer
+from .core.Iteration import Iteration
+from .core.OnBeatGraceContainer import OnBeatGraceContainer
+from .duration import Duration, Multiplier, Offset
+from .indicators.MetronomeMark import MetronomeMark
+from .indicators.TimeSignature import TimeSignature
 from .inspectx import Inspection
+from .storage import StorageFormatManager
+from .timespans import AnnotatedTimespan, TimespanList
+from .utilities.Sequence import Sequence
 
 
 class UpdateManager(object):

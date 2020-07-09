@@ -13,7 +13,6 @@ from .core.Rest import Rest
 from .core.Selection import DurationInequality, Selection
 from .core.Skip import Skip
 from .core.Staff import Staff
-from .core.inspectx import Inspection
 from .duration import Duration
 from .indicators.BeamCount import BeamCount
 from .indicators.BendAfter import BendAfter
@@ -40,6 +39,7 @@ from .indicators.StopSlur import StopSlur
 from .indicators.StopTextSpan import StopTextSpan
 from .indicators.StopTrillSpan import StopTrillSpan
 from .indicators.Tie import Tie
+from .inspectx import Inspection
 from .overrides import IndexedTweakManager, LilyPondLiteral, TweakInterface, tweak
 from .scheme import SchemeSymbol
 from .tags import Tag, Tags

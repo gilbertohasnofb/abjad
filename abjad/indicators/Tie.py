@@ -121,7 +121,7 @@ class Tie(object):
     def _attachment_test_all(self, argument):
         from ..core.Chord import Chord
         from ..core.Note import Note
-        from ..core.inspectx import Inspection
+        from ..inspectx import Inspection
 
         if not isinstance(argument, (Chord, Note)):
             string = f"Must be note or chord (not {argument})."

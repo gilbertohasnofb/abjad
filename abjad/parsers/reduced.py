@@ -5,7 +5,6 @@ from ..core.Note import Note
 from ..core.Rest import Rest
 from ..core.Selection import Selection
 from ..core.Tuplet import Tuplet
-from ..core.inspectx import Inspection
 from ..duration import Duration, NonreducedFraction
 from ..enums import Left, Right
 from ..indicators.StartBeam import StartBeam
@@ -14,6 +13,7 @@ from ..indicators.StopBeam import StopBeam
 from ..indicators.StopSlur import StopSlur
 from ..indicators.Tie import Tie
 from ..indicators.TimeSignature import TimeSignature
+from ..inspectx import Inspection
 from ..pitch.pitchclasses import NamedPitchClass
 from ..pitch.pitches import NamedPitch
 from .base import Parser

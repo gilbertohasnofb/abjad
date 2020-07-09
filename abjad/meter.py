@@ -1,7 +1,6 @@
 """
 Tools for modeling musical meter.
 """
-
 import bisect
 import collections
 import typing
@@ -18,9 +17,9 @@ from .core.Rest import Rest
 from .core.Selection import Selection
 from .core.Skip import Skip
 from .core.Tuplet import Tuplet
-from .core.inspectx import Inspection
 from .duration import Duration, Multiplier, NonreducedFraction, Offset
 from .indicators.TimeSignature import TimeSignature
+from .inspectx import Inspection
 from .storage import FormatSpecification, StorageFormatManager
 from .timespans import Timespan, TimespanList
 from .utilities.Sequence import Sequence

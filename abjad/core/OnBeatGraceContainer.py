@@ -3,6 +3,7 @@ import typing
 from .. import typings
 from ..bundle import LilyPondFormatBundle
 from ..duration import Duration
+from ..inspectx import Inspection
 from ..overrides import LilyPondLiteral, tweak
 from ..spanners import beam, slur
 from ..tags import Tag, Tags
@@ -13,7 +14,6 @@ from .Mutation import Mutation
 from .Note import Note
 from .Selection import Selection
 from .Voice import Voice
-from .inspectx import Inspection
 
 abjad_tags = Tags()
 

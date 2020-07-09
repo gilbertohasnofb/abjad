@@ -5,6 +5,7 @@ from .. import enums, exceptions
 from ..duration import Duration
 from ..indicators.RepeatTie import RepeatTie
 from ..indicators.Tie import Tie
+from ..inspectx import Inspection
 from ..pitch.intervals import NamedInterval
 from ..ratio import Ratio
 from ..spanners import tie
@@ -18,7 +19,6 @@ from .Leaf import Leaf
 from .Note import Note
 from .Selection import Selection
 from .Tuplet import Tuplet
-from .inspectx import Inspection
 from .makers import NoteMaker
 
 

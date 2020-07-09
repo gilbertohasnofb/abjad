@@ -13,9 +13,9 @@ from .core.Skip import Skip
 from .core.Staff import Staff
 from .core.StaffGroup import StaffGroup
 from .core.Voice import Voice
-from .core.inspectx import Inspection
 from .indicators.Clef import Clef
 from .indicators.MarginMarkup import MarginMarkup
+from .inspectx import Inspection
 from .instruments import Piano
 from .lilypondfile import LilyPondFile
 from .new import new
