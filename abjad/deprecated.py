@@ -4,11 +4,11 @@ from .core.Component import attach
 from .core.Iteration import Iteration
 from .core.Leaf import Leaf
 from .core.MultimeasureRest import MultimeasureRest
-from .core.Selection import Selection
 from .core.Voice import Voice
 from .indicators.BarLine import BarLine
 from .inspectx import Inspection
 from .overrides import override
+from .select import Selection
 from .tags import Tag
 
 

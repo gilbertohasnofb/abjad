@@ -8,7 +8,6 @@ from .core.Context import Context
 from .core.Iteration import Iteration
 from .core.MultimeasureRest import MultimeasureRest
 from .core.Score import Score
-from .core.Selection import Selection
 from .core.Skip import Skip
 from .core.Staff import Staff
 from .core.StaffGroup import StaffGroup
@@ -23,6 +22,7 @@ from .overrides import LilyPondLiteral
 from .segments.Part import Part
 from .segments.PartAssignment import PartAssignment
 from .segments.PartManifest import PartManifest
+from .select import Selection
 from .storage import StorageFormatManager
 from .tags import Tag, Tags
 from .utilities.OrderedDict import OrderedDict

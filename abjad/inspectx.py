@@ -170,8 +170,8 @@ class Inspection(object):
 
     @staticmethod
     def _leaf(LEAF, n):
-        from .core.Selection import Selection
         from .core.obgc import OnBeatGraceContainer
+        from .select import Selection
 
         assert n in (-1, 0, 1), repr(n)
         if n == 0:
@@ -943,7 +943,7 @@ class Inspection(object):
 
         """
         from .core.Descendants import Descendants
-        from .core.Selection import Selection
+        from .select import Selection
 
         if isinstance(self.client, Component):
             return Descendants(self.client)
@@ -3688,7 +3688,7 @@ class Inspection(object):
             Note("fs'16")                  PitchSet(["fs'"])
 
         """
-        from .core.Selection import Selection
+        from .select import Selection
 
         if not self.client:
             return None
@@ -3773,7 +3773,7 @@ class Inspection(object):
             slot "absolute after":
 
         """
-        from .formatting import LilyPondFormatManager
+        from .formatx import LilyPondFormatManager
 
         if isinstance(self.client, Container):
             bundle = LilyPondFormatManager.bundle_format_contributions(self.client)
@@ -3887,7 +3887,7 @@ class Inspection(object):
             True
 
         """
-        from .core.Selection import Selection
+        from .select import Selection
 
         lt_head_count = 0
         leaves = Selection(self.client).leaves()

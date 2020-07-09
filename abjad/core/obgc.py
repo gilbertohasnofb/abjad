@@ -4,15 +4,15 @@ from .. import typings
 from ..bundle import LilyPondFormatBundle
 from ..duration import Duration
 from ..inspectx import Inspection
+from ..mutate import Mutation
 from ..overrides import LilyPondLiteral, tweak
+from ..select import Selection
 from ..spanners import beam, slur
 from ..tags import Tag, Tags
 from .Chord import Chord
 from .Component import attach, detach
 from .Container import Container
-from .Mutation import Mutation
 from .Note import Note
-from .Selection import Selection
 from .Voice import Voice
 
 abjad_tags = Tags()

@@ -10,7 +10,6 @@ from .core.Iteration import Iteration
 from .core.MultimeasureRest import MultimeasureRest
 from .core.Note import Note
 from .core.Rest import Rest
-from .core.Selection import DurationInequality, Selection
 from .core.Skip import Skip
 from .core.Staff import Staff
 from .duration import Duration
@@ -42,6 +41,7 @@ from .indicators.Tie import Tie
 from .inspectx import Inspection
 from .overrides import IndexedTweakManager, LilyPondLiteral, TweakInterface, tweak
 from .scheme import SchemeSymbol
+from .select import DurationInequality, Selection
 from .tags import Tag, Tags
 from .utilities.Expression import Expression
 from .utilities.Sequence import Sequence

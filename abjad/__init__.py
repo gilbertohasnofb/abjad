@@ -50,7 +50,7 @@ from .storage import (
     StorageFormatManager,
 )
 from .configuration import Configuration
-from .formatting import (
+from .formatx import (
     LilyPondFormatManager,
     f,
 )
@@ -337,32 +337,21 @@ from .core.Descendants import Descendants
 from .core.Iteration import Iteration
 from .core.Iteration import iterate
 from .core.Leaf import Leaf
-from .core.makers import LeafMaker, NoteMaker
-from .core import makers
 from .core.Lineage import Lineage
 from .core.LogicalTie import LogicalTie
 from .core.MultimeasureRest import MultimeasureRest
-from .core.Mutation import Mutation, mutate
 from .core.Note import Note
 from .core.noteheads import DrumNoteHead, NoteHead, NoteHeadList
 from .core.obgc import OnBeatGraceContainer, on_beat_grace_container
 from .core.Parentage import Parentage
 from .core.Rest import Rest
 from .core.Score import Score
-from .core.Selection import (
-    Inequality,
-    DurationInequality,
-    LengthInequality,
-    PitchInequality,
-    Selection,
-    select,
-)
 from .core.Skip import Skip
 from .core.Staff import Staff
 from .core.StaffGroup import StaffGroup
 from .core.TremoloContainer import TremoloContainer
 from .core.Tuplet import Tuplet
-from .core.verticalmoment import (
+from .verticalmoment import (
     VerticalMoment,
     iterate_leaf_pairs,
     iterate_pitch_pairs,
@@ -370,6 +359,17 @@ from .core.verticalmoment import (
 )
 from .core.Voice import Voice
 from .inspectx import Inspection, inspect
+from . import makers
+from .makers import LeafMaker, NoteMaker
+from .mutate import Mutation, mutate
+from .select import (
+    Inequality,
+    DurationInequality,
+    LengthInequality,
+    PitchInequality,
+    Selection,
+    select,
+)
 from .update import UpdateManager
 from .wellformedness import Wellformedness, wellformed
 

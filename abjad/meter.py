@@ -11,15 +11,15 @@ from . import markups, mathtools, rhythmtrees
 from .core.Chord import Chord
 from .core.Container import Container
 from .core.LogicalTie import LogicalTie
-from .core.Mutation import Mutation
 from .core.Note import Note
 from .core.Rest import Rest
-from .core.Selection import Selection
 from .core.Skip import Skip
 from .core.Tuplet import Tuplet
 from .duration import Duration, Multiplier, NonreducedFraction, Offset
 from .indicators.TimeSignature import TimeSignature
 from .inspectx import Inspection
+from .mutate import Mutation
+from .select import Selection
 from .storage import FormatSpecification, StorageFormatManager
 from .timespans import Timespan, TimespanList
 from .utilities.Sequence import Sequence

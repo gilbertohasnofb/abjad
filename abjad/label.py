@@ -7,9 +7,7 @@ from .core.Chord import Chord
 from .core.Component import Component, attach, detach
 from .core.Iteration import Iteration
 from .core.Note import Note
-from .core.Selection import Selection
 from .core.Skip import Skip
-from .core.verticalmoment import iterate_vertical_moments
 from .duration import Duration, NonreducedFraction
 from .indicators.LilyPondComment import LilyPondComment
 from .inspectx import Inspection
@@ -29,9 +27,11 @@ from .pitch.segments import PitchSegment
 from .pitch.sets import PitchClassSet
 from .pitch.vectors import IntervalClassVector
 from .scheme import SchemeColor
+from .select import Selection
 from .storage import StorageFormatManager
 from .tags import Tag
 from .utilities.Expression import Expression
+from .verticalmoment import iterate_vertical_moments
 
 
 class Label(object):

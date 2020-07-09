@@ -1,25 +1,25 @@
 import copy
 import itertools
 
-from .. import enums, exceptions
-from ..duration import Duration
-from ..indicators.RepeatTie import RepeatTie
-from ..indicators.Tie import Tie
-from ..inspectx import Inspection
-from ..pitch.intervals import NamedInterval
-from ..ratio import Ratio
-from ..spanners import tie
-from ..storage import StorageFormatManager
-from ..utilities.Sequence import Sequence
-from .Chord import Chord
-from .Component import Component, attach, detach
-from .Container import Container
-from .Iteration import Iteration
-from .Leaf import Leaf
-from .Note import Note
-from .Selection import Selection
-from .Tuplet import Tuplet
+from . import enums, exceptions
+from .core.Chord import Chord
+from .core.Component import Component, attach, detach
+from .core.Container import Container
+from .core.Iteration import Iteration
+from .core.Leaf import Leaf
+from .core.Note import Note
+from .core.Tuplet import Tuplet
+from .duration import Duration
+from .indicators.RepeatTie import RepeatTie
+from .indicators.Tie import Tie
+from .inspectx import Inspection
 from .makers import NoteMaker
+from .pitch.intervals import NamedInterval
+from .ratio import Ratio
+from .select import Selection
+from .spanners import tie
+from .storage import StorageFormatManager
+from .utilities.Sequence import Sequence
 
 
 class Mutation(object):

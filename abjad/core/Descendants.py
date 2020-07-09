@@ -2,9 +2,9 @@ import collections
 import typing
 
 from ..inspectx import Inspection
+from ..select import Selection
 from ..storage import StorageFormatManager
 from .Component import Component
-from .Selection import Selection
 
 
 class Descendants(collections.abc.Sequence):

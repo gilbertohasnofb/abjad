@@ -6,12 +6,12 @@ from ..core.Container import Container
 from ..core.Context import Context
 from ..core.Iteration import Iteration
 from ..core.Score import Score
-from ..core.Selection import Selection
 from ..core.Staff import Staff
 from ..core.Voice import Voice
 from ..inspectx import Inspection
 from ..lilypondfile import LilyPondFile
 from ..overrides import LilyPondLiteral
+from ..select import Selection
 from ..storage import StorageFormatManager
 from ..tags import Tag
 from ..timespans import TimespanList

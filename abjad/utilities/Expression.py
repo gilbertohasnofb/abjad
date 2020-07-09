@@ -2040,7 +2040,7 @@ class Expression(object):
                 Note("gf'8")
 
         """
-        from ..core.Selection import Selection
+        from ..select import Selection
 
         class_ = Selection
         callback = self._make_initializer_callback(class_, **keywords)

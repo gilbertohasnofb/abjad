@@ -16,7 +16,6 @@ from .core.Container import Container
 from .core.Context import Context
 from .core.Iteration import Iteration
 from .core.Score import Score
-from .core.Selection import Selection
 from .core.Skip import Skip
 from .core.Staff import Staff
 from .core.Voice import Voice
@@ -25,6 +24,7 @@ from .inspectx import Inspection
 from .overrides import LilyPondLiteral, override, setting
 from .pitch.pitches import NamedPitch
 from .scheme import Scheme, SpacingVector
+from .select import Selection
 from .storage import FormatSpecification, StorageFormatManager
 from .tags import Tag
 from .utilities.Sequence import Sequence

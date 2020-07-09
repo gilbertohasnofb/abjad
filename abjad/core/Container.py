@@ -289,7 +289,7 @@ class Container(Component):
 
         Returns none.
         """
-        from .Selection import Selection
+        from ..select import Selection
 
         components = self[i]
         if not isinstance(components, Selection):
@@ -302,7 +302,7 @@ class Container(Component):
 
         Traverses top-level items only.
         """
-        from .Selection import Selection
+        from ..select import Selection
 
         if isinstance(argument, int):
             return self.components.__getitem__(argument)
@@ -597,7 +597,7 @@ class Container(Component):
         return result
 
     def _initialize_components(self, components):
-        from .Selection import Selection
+        from ..select import Selection
 
         if isinstance(components, collections.abc.Iterable) and not isinstance(
             components, str
@@ -685,8 +685,8 @@ class Container(Component):
             item._scale(multiplier)
 
     def _set_item(self, i, argument):
+        from ..select import Selection
         from .BeforeGraceContainer import BeforeGraceContainer
-        from .Selection import Selection
 
         argument_wrappers = []
         for component in self._get_components(argument):

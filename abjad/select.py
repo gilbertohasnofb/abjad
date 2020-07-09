@@ -5,33 +5,33 @@ import itertools
 import operator
 import typing
 
-from .. import enums, mathtools, typings
-from ..duration import Duration, Offset
-from ..indicators.Tie import Tie
-from ..inspectx import Inspection
-from ..new import new
-from ..pitch.pitches import NamedPitch, NumberedPitch
-from ..pitch.segments import PitchSegment
-from ..pitch.sets import PitchSet
-from ..ratio import Ratio
-from ..storage import FormatSpecification, StorageFormatManager
-from ..utilities.CyclicTuple import CyclicTuple
-from ..utilities.Expression import Expression
-from ..utilities.Pattern import Pattern
-from ..utilities.Sequence import Sequence
-from .Chord import Chord
-from .Component import Component, attach, detach
-from .Container import Container
-from .Context import Context
-from .Iteration import Iteration
-from .Leaf import Leaf
-from .MultimeasureRest import MultimeasureRest
-from .Note import Note
-from .Parentage import Parentage
-from .Rest import Rest
-from .Skip import Skip
-from .Tuplet import Tuplet
-from .Voice import Voice
+from . import enums, mathtools, typings
+from .core.Chord import Chord
+from .core.Component import Component, attach, detach
+from .core.Container import Container
+from .core.Context import Context
+from .core.Iteration import Iteration
+from .core.Leaf import Leaf
+from .core.MultimeasureRest import MultimeasureRest
+from .core.Note import Note
+from .core.Parentage import Parentage
+from .core.Rest import Rest
+from .core.Skip import Skip
+from .core.Tuplet import Tuplet
+from .core.Voice import Voice
+from .duration import Duration, Offset
+from .indicators.Tie import Tie
+from .inspectx import Inspection
+from .new import new
+from .pitch.pitches import NamedPitch, NumberedPitch
+from .pitch.segments import PitchSegment
+from .pitch.sets import PitchSet
+from .ratio import Ratio
+from .storage import FormatSpecification, StorageFormatManager
+from .utilities.CyclicTuple import CyclicTuple
+from .utilities.Expression import Expression
+from .utilities.Pattern import Pattern
+from .utilities.Sequence import Sequence
 
 ### INEQUALITIES ###
 
@@ -9668,7 +9668,7 @@ class Selection(collections.abc.Sequence):
             tuplets.
 
         """
-        from .Descendants import Descendants
+        from .core.Descendants import Descendants
 
         if self._expression:
             return self._update_expression(inspect.currentframe())

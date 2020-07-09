@@ -157,7 +157,7 @@ class Component(object):
         return False
 
     def _extract(self):
-        from .Selection import Selection
+        from ..select import Selection
 
         selection = Selection([self])
         parent, start, stop = selection._get_parent_and_start_stop_indices()
@@ -189,7 +189,7 @@ class Component(object):
         return []
 
     def _format_component(self, pieces=False):
-        from ..formatting import LilyPondFormatManager
+        from ..formatx import LilyPondFormatManager
 
         result = []
         bundle = LilyPondFormatManager.bundle_format_contributions(self)
@@ -245,7 +245,7 @@ class Component(object):
         return result
 
     def _get_contents(self):
-        from .Selection import Selection
+        from ..select import Selection
 
         result = []
         result.append(self)
@@ -364,7 +364,7 @@ class Component(object):
         return wrapper
 
     def _get_format_contributions_for_slot(self, slot_identifier, bundle=None):
-        from ..formatting import LilyPondFormatManager
+        from ..formatx import LilyPondFormatManager
 
         result = []
         if bundle is None:
