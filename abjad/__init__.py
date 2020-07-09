@@ -345,8 +345,7 @@ from .core.MultimeasureRest import MultimeasureRest
 from .core.Mutation import Mutation, mutate
 from .core.Note import Note
 from .core.noteheads import DrumNoteHead, NoteHead, NoteHeadList
-from .core.OnBeatGraceContainer import OnBeatGraceContainer
-from .core.OnBeatGraceContainer import on_beat_grace_container
+from .core.obgc import OnBeatGraceContainer, on_beat_grace_container
 from .core.Parentage import Parentage
 from .core.Rest import Rest
 from .core.Score import Score

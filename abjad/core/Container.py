@@ -568,7 +568,7 @@ class Container(Component):
         )
 
     def _get_on_beat_anchor_voice(self):
-        from .OnBeatGraceContainer import OnBeatGraceContainer
+        from .obgc import OnBeatGraceContainer
 
         container = self._parent
         if container is None:
@@ -639,8 +639,8 @@ class Container(Component):
         return wrapper._is_on_beat_wrapper()
 
     def _is_on_beat_wrapper(self):
-        from .OnBeatGraceContainer import OnBeatGraceContainer
         from .Voice import Voice
+        from .obgc import OnBeatGraceContainer
 
         if not self.simultaneous:
             return False

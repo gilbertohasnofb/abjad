@@ -482,7 +482,7 @@ class Component(object):
             return self._parent[index]
 
     def _get_sibling_with_graces(self, n):
-        from .OnBeatGraceContainer import OnBeatGraceContainer
+        from .obgc import OnBeatGraceContainer
 
         assert n in (-1, 0, 1), repr(self, n)
         if n == 0:

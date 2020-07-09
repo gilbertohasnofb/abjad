@@ -2,7 +2,7 @@ from . import mathtools
 from .core.AfterGraceContainer import AfterGraceContainer
 from .core.BeforeGraceContainer import BeforeGraceContainer
 from .core.Iteration import Iteration
-from .core.OnBeatGraceContainer import OnBeatGraceContainer
+from .core.obgc import OnBeatGraceContainer
 from .duration import Duration, Multiplier, Offset
 from .indicators.MetronomeMark import MetronomeMark
 from .indicators.TimeSignature import TimeSignature

@@ -170,8 +170,8 @@ class Inspection(object):
 
     @staticmethod
     def _leaf(LEAF, n):
-        from .core.OnBeatGraceContainer import OnBeatGraceContainer
         from .core.Selection import Selection
+        from .core.obgc import OnBeatGraceContainer
 
         assert n in (-1, 0, 1), repr(n)
         if n == 0:
@@ -1926,7 +1926,7 @@ class Inspection(object):
         """
         from .core.AfterGraceContainer import AfterGraceContainer
         from .core.BeforeGraceContainer import BeforeGraceContainer
-        from .core.OnBeatGraceContainer import OnBeatGraceContainer
+        from .core.obgc import OnBeatGraceContainer
 
         prototype = (
             AfterGraceContainer,
