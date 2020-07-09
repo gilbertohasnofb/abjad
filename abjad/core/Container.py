@@ -378,7 +378,7 @@ class Container(Component):
             if isinstance(i, int):
                 assert len(argument) == 1, repr(argument)
                 argument = argument[0]
-        return self._set_item(i, argument)
+        self._set_item(i, argument)
 
     ### PRIVATE METHODS ###
 
@@ -590,6 +590,12 @@ class Container(Component):
     def _get_repr_kwargs_names(self):
         return ["simultaneous", "name"]
 
+    def _get_subtree(self):
+        result = [self]
+        for component in self:
+            result.extend(component._get_subtree())
+        return result
+
     def _initialize_components(self, components):
         from .Selection import Selection
 
@@ -680,11 +686,10 @@ class Container(Component):
 
     def _set_item(self, i, argument):
         from .BeforeGraceContainer import BeforeGraceContainer
-        from .Iteration import Iteration
         from .Selection import Selection
 
         argument_wrappers = []
-        for component in Iteration(argument).components():
+        for component in self._get_components(argument):
             wrappers = component._get_indicators(unwrap=False)
             argument_wrappers.extend(wrappers)
         if isinstance(i, int):

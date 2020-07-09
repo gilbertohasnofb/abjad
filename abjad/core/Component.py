@@ -234,6 +234,16 @@ class Component(object):
             result.append(pair)
         return result
 
+    @staticmethod
+    def _get_components(argument):
+        result = []
+        if isinstance(argument, Component):
+            result.extend(argument._get_subtree())
+        else:
+            for item in argument:
+                result.extend(Component._get_components(item))
+        return result
+
     def _get_contents(self):
         from .Selection import Selection
 

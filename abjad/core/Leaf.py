@@ -228,6 +228,15 @@ class Leaf(Component):
     def _get_preprolated_duration(self):
         return self._get_multiplied_duration()
 
+    def _get_subtree(self):
+        result = []
+        if self._before_grace_container is not None:
+            result.extend(self._before_grace_container._get_subtree())
+        result.append(self)
+        if self._after_grace_container is not None:
+            result.extend(self._after_grace_container._get_subtree())
+        return result
+
     def _process_contribution_packet(self, contribution_packet):
         result = ""
         for contributor, contributions in contribution_packet:
